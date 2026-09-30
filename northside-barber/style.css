@@ -1,0 +1,933 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --black: #111111;
+    --dark: #1a1a1a;
+    --cream: #eee9df;
+    --white: #ffffff;
+    --red: #9f2924;
+    --gray: #aaa59c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    height: 80px;
+    padding: 0 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 35px;
+}
+
+.navigation a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+.header-button {
+    padding: 11px 20px;
+
+    background: var(--red);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-button:hover {
+    background: #7f1f1b;
+}
+
+
+/* =========================
+   SMALL LABEL
+========================= */
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    color: var(--red);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 680px;
+    padding: 80px 6vw;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+
+    background: var(--black);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(75px, 10vw, 145px);
+    font-weight: 900;
+    line-height: 0.78;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero-description {
+    max-width: 500px;
+    margin: 40px 0 30px;
+
+    color: #bcbcbc;
+    font-size: 17px;
+}
+
+.main-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: var(--red);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.main-button:hover {
+    background: #7f1f1b;
+}
+
+
+/* =========================
+   BARBER BADGE
+========================= */
+
+.hero-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge-circle {
+    width: min(400px, 70vw);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            var(--red) 0px,
+            var(--red) 35px,
+            var(--cream) 35px,
+            var(--cream) 70px
+        );
+
+    border: 12px solid var(--cream);
+
+    box-shadow:
+        0 0 0 5px var(--black),
+        0 0 0 7px #555;
+}
+
+.badge-inner {
+    width: 65%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--black);
+
+    border: 5px solid var(--cream);
+}
+
+.badge-inner span {
+    color: var(--red);
+    font-size: 45px;
+    line-height: 1;
+}
+
+.badge-inner strong {
+    margin-top: 10px;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.badge-inner small {
+    color: var(--gray);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 100px 6vw;
+
+    background: var(--cream);
+    color: var(--black);
+}
+
+.section-intro {
+    max-width: 550px;
+    margin-bottom: 60px;
+}
+
+.section-intro h2 {
+    margin-bottom: 25px;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 900;
+    line-height: 0.8;
+    text-transform: uppercase;
+}
+
+.section-intro > p:last-child {
+    max-width: 400px;
+    color: #555;
+}
+
+.service-list {
+    border-top: 2px solid var(--black);
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+.service {
+    min-height: 150px;
+
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    align-items: center;
+    gap: 30px;
+
+    padding: 0 25px;
+    margin: 0 -25px;
+
+    border-bottom: 2px solid var(--black);
+    cursor: pointer;
+
+    
+}
+
+.service-number {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.service-info h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-info p {
+    max-width: 550px;
+    margin-top: 8px;
+
+    color: #666;
+    font-size: 14px;
+}
+
+.service-price {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.service-hint {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--red);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.service {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.service:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.service:hover .service-number,
+.service:hover .service-info h3,
+.service:hover .service-info p,
+.service:hover .service-price {
+    color: var(--white);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 110px 6vw;
+
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 80px;
+
+    background: var(--dark);
+}
+
+.about-mark {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-mark span {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--red);
+
+    color: var(--red);
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+}
+
+.about-content {
+    max-width: 700px;
+}
+
+.about-content h2 {
+    margin-bottom: 35px;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(60px, 8vw, 110px);
+    font-weight: 900;
+    line-height: 0.82;
+    text-transform: uppercase;
+}
+
+.about-content > p:not(.eyebrow) {
+    max-width: 650px;
+    margin-bottom: 20px;
+
+    color: #aaa;
+    font-size: 16px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 100px 6vw;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    background: var(--red);
+}
+
+.contact-heading h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(70px, 9vw, 130px);
+    font-weight: 900;
+    line-height: 0.78;
+    text-transform: uppercase;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-block {
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.contact-block span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+.contact-block strong {
+    font-size: 16px;
+}
+
+.contact-button {
+    width: fit-content;
+    margin-top: 30px;
+
+    background: var(--black);
+}
+
+.contact-button:hover {
+    background: #252525;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    min-height: 70px;
+    padding: 20px 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b0b0b;
+
+    color: #777;
+    font-size: 11px;
+}
+
+.site-footer strong {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.popular-tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+
+    background: var(--red);
+    color: var(--white);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    padding: 0 25px;
+    margin: 0 -25px;
+    background: #0b0b0b;
+    color: var(--white);
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.5s ease,
+        opacity 0.35s ease,
+        padding 0.5s ease;
+}
+
+.service-details.open {
+    max-height: 500px;
+    padding: 30px 25px;
+    opacity: 1;
+}
+
+.service-details.open {
+    display: grid;
+}
+
+.service-details-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.service-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-details-content h3 {
+    margin-bottom: 15px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+.service-details-content p:last-child {
+    max-width: 500px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.classic-cut-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.skin-fade-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+
+}
+
+.hot-towel-shave-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.buzz-cut-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center 30%;
+}
+
+.long-hair-cut-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.beard-trim-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-badge {
+        margin-top: 30px;
+    }
+
+    .badge-circle {
+        width: 300px;
+    }
+
+    .service {
+        grid-template-columns: 45px 1fr 70px;
+        gap: 15px;
+    }
+
+    .service-info h3 {
+        font-size: 30px;
+    }
+
+    .service-info p {
+        font-size: 13px;
+    }
+
+    .service-price {
+        font-size: 25px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-mark {
+        justify-content: flex-start;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+.booking-note {
+    margin-bottom: 25px;
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.booking-note strong {
+    display: block;
+    margin-bottom: 5px;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.booking-note p {
+    margin: 0;
+
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-right a {
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-right a:hover {
+    color: var(--red);
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+    padding: 100px 6vw;
+
+    background: var(--black);
+    color: var(--white);
+}
+
+.testimonials-heading {
+    margin-bottom: 60px;
+}
+
+.testimonials-heading h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 900;
+    line-height: 0.8;
+    text-transform: uppercase;
+}
+
+.testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial {
+    min-height: 240px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid #333;
+}
+
+.testimonial-mark {
+    color: var(--red);
+
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 0.6;
+}
+
+.testimonial p {
+    margin: 20px 0;
+
+    color: #c0c0c0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.testimonial strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: auto;
+    margin-right: 30px;
+
+
+}
+
+.header-hours span {
+    color: var(--gray);
+
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.header-hours strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+
+.shop-banner {
+    min-height: 42px;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    background: var(--red);
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.shop-banner span {
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+
+    .site-header {
+        padding: 0 5vw;
+    }
+
+    .header-button {
+        padding: 10px 13px;
+        font-size: 10px;
+    }
+
+    .hero,
+    .services,
+    .about,
+    .contact {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .service {
+        grid-template-columns: 35px 1fr;
+        padding: 25px 0;
+    }
+
+    .service-price {
+        grid-column: 2;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .about-mark span {
+        width: 160px;
+        height: 160px;
+        font-size: 65px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .testimonial-list {
+        grid-template-columns: 1fr;
+    }
+
+    .header-hours {
+        display: none;
+    }
+
+    .shop-banner {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    gap: 8px;
+    }
+    
+    .service-list {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    }
+
+    .service {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .service-details {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 20px;
+    }
+
+    .service-details-image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .service-details-content h3 {
+        font-size: 32px;
+    }
+
+    
+
+}

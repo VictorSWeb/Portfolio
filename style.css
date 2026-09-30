@@ -74,6 +74,10 @@ nav a:hover, .nav-cta:hover { color: var(--accent); }
 .project-card { min-width: 0; }
 .project-preview { position: relative; display: flex; height: 300px; align-items: flex-start; overflow: hidden; padding: 26px; transition: filter 220ms ease; }
 .project-card:hover .project-preview { filter: brightness(1.12); }
+.preview-barber { flex-direction: column; padding: 0; border: 1px solid var(--line); }
+.preview-barber img { display: block; flex: 1; min-height: 0; width: 100%; height: auto; object-fit: contain; background: var(--ink); }
+.preview-hint { display: flex; flex: none; height: 20px; align-items: center; justify-content: flex-end; gap: 5px; padding: 0 9px; border-top: 1px solid var(--line); color: var(--muted); font-size: 8px; letter-spacing: 1.2px; }
+.preview-hint span { color: var(--accent); }
 .preview-cafe { background: #b5b991; color: #202318; }
 .preview-studio { background: #d8c9b1; color: #312c27; }
 .preview-wellness { background: #91aaa0; color: #17241f; }

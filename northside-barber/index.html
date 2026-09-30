@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Northside Barber Co.</title>
+    <meta name="description" content="Northside Barber Co. — Modern cuts, classic craft.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="#" class="logo">NORTHSIDE<span>.</span></a>
+
+        <nav class="navigation">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-hours">
+            <span>Open Today</span>
+            <strong>9:00 AM – 7:00 PM</strong>
+        </div>
+
+        <a href="#contact" class="header-button">Book Now</a>
+    </header>
+    
+    <div class="shop-banner">
+        <span>✦</span>
+        WALK-INS WELCOME · APPOINTMENTS RECOMMENDED
+        <span>✦</span>
+    </div>
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">Barber Shop · Northside</p>
+
+                <h1>
+                    LOOK<br>
+                    <span>SHARP.</span> <br>
+                    FEEL<br>
+                    GOOD.
+                </h1>
+
+                <p class="hero-description">
+                    Modern barbering with old-school attention to detail.
+                    Clean cuts, straight-razor shaves and good conversation.
+                </p>
+
+                <a href="#contact" class="main-button">
+                    Book Your Appointment
+                </a>
+
+            </div>
+
+
+            <div class="hero-badge">
+
+                <div class="badge-circle">
+
+                    <div class="badge-inner">
+                        <span>✦</span>
+                        <strong>NORTHSIDE</strong>
+                        <small>BARBER CO.</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section class="services" id="services">
+
+            <div class="section-intro">
+                <p class="eyebrow">What we do</p>
+
+                <h2>
+                    THE<br>
+                    CHAIR.
+                </h2>
+
+                <p>
+                    No complicated packages. Just quality barbering
+                    and a cut that works for you.
+                </p>
+            </div>
+
+
+            <div class="service-list">
+
+                <article class="service" onclick="toggleService(this)">
+                    <div class="service-number">01</div>
+
+                    <div class="service-info">
+                        <h3>Classic Cut</h3>
+                        <p>
+                            A clean, timeless haircut finished with
+                            precision and attention to detail.
+                        </p>
+                    </div>
+
+                    <div class="service-price">
+                        <span class="service-hint">VIEW DETAILS ↗</span>
+                        $35
+                    </div>
+                </article>
+
+                <div class="service-details">
+                    <div class="service-details-image">
+                        <img class="classic-cut-img" src="imagens/classic-cut.jpg" alt="classic cut">
+                    </div>
+
+                    <div class="service-details-content">
+                        <p class="eyebrow">Classic Cut</p>
+                        <h3>Clean. Timeless. Precise.</h3>
+                        <p>
+                            A traditional haircut with a modern finish,
+                            tailored to your style and finished with precise detailing.
+                        </p>
+                    </div>
+                </div>
+
+
+                <article class="service" onclick="toggleService(this)">
+                    <div class="service-number">02</div>
+
+                    <div class="service-info">
+                        <h3>Skin Fade</h3>
+                        <p>
+                            A sharp fade blended from skin to length
+                            with a clean finish.
+                        </p>
+                    </div>
+
+                    <div class="service-price">
+                        <span class="service-hint">VIEW DETAILS ↗</span>
+                        $40
+                    </div>
+                </article>
+
+                <div class="service-details">
+                    <div class="service-details-image">
+                        <img class="skin-fade-img" src="imagens/skin-fade.jpg" alt="Skin fade haircut">
+                    </div>
+
+                    <div class="service-details-content">
+                        <p class="eyebrow">Skin Fade</p>
+                        <h3>Clean. Sharp. Detailed.</h3>
+                        <p>
+                            A precise skin fade with seamless transitions,
+                            sharp edges and a clean finish tailored to your style.
+                        </p>
+                    </div>
+                </div>
+
+
+                <article class="service" onclick="toggleService(this)">
+                    <div class="service-number">03</div>
+
+                    <div class="service-info">
+                        <span class="popular-tag">POPULAR</span>
+                        <h3>Cut + Beard</h3>
+                        <p>
+                            Full haircut paired with a beard trim,
+                            shape-up and hot towel finish.
+                        </p>
+                    </div>
+
+                    <div class="service-price">
+                        <span class="service-hint">VIEW DETAILS ↗</span>
+                        $55
+                    </div>
+                </article>
+
+                <div class="service-details">
+                    <div class="service-details-image">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80" alt="Haircut and beard">
+                    </div>
+
+                    <div class="service-details-content">
+                        <p class="eyebrow">Cut + Beard</p>
+                        <h3>Fresh Cut. Sharp Beard.</h3>
+                        <p>
+                            A complete grooming service combining a tailored haircut
+                            with precise beard shaping and a clean, polished finish.
+                        </p>
+                    </div>
+                </div>
+
+                <article class="service" onclick="toggleService(this)">
+                    <div class="service-number">04</div>
+
+                    <div class="service-info">
+                        <h3>Hot Towel Shave</h3>
+                        <p>
+                            Traditional straight-razor shave with
+                            hot towel preparation.
+                        </p>
+                    </div>
+
+                    <div class="service-price">
+                        <span class="service-hint">VIEW DETAILS ↗</span>
+                        $30
+                    </div>
+
+                </article>
+
+                <div class="service-details">
+                    <div class="service-details-image">
+                        <img class="hot-towel-shave-img" src="imagens/hot-towel-shave.jpg" alt="Hot towel shave">
+                    </div>
+
+                    <div class="service-details-content">
+                        <p class="eyebrow">Hot Towel Shave</p>
+                        <h3>Classic. Smooth. Relaxed.</h3>
+                        <p>
+                            A traditional hot towel shave with a close, smooth finish,
+                            warm towels and careful attention to every detail.
+                        </p>
+                    </div>
+                </div>
+
+                <article class="service" onclick="toggleService(this)">
+                <div class="service-number">05</div>
+
+                <div class="service-info">
+                    <h3>Buzz Cut</h3>
+                    <p>
+                        A clean, low-maintenance cut finished with
+                        sharp edges and precise detailing.
+                    </p>
+                </div>
+
+                <div class="service-price">
+                    <span class="service-hint">VIEW DETAILS ↗</span>
+                    $25
+                </div>
+            </article>
+
+            <div class="service-details">
+                <div class="service-details-image">
+                    <img class="buzz-cut-img" src="imagens/buzzcut.jpg" alt="Buzz cut">
+                </div>
+
+                <div class="service-details-content">
+                    <p class="eyebrow">Buzz Cut</p>
+                    <h3>Simple. Clean. Sharp.</h3>
+                    <p>
+                        A clean, low-maintenance buzz cut with precise edges
+                        and detailed finishing for a sharp, effortless look.
+                    </p>
+                </div>
+            </div>
+
+
+            <article class="service" onclick="toggleService(this)">
+                <div class="service-number">06</div>
+
+                <div class="service-info">
+                    <h3>Long Hair Cut</h3>
+                    <p>
+                        Scissor-focused haircut designed to keep
+                        length while improving shape and movement.
+                    </p>
+                </div>
+
+                <div class="service-price">
+                    <span class="service-hint">VIEW DETAILS ↗</span>
+                    $45
+                </div>
+            </article>
+
+            <div class="service-details">
+                <div class="service-details-image">
+                    <img class="long-hair-cut-img" src="imagens/long-hair-cut.jpg" alt="Long hair haircut">
+                </div>
+
+                <div class="service-details-content">
+                    <p class="eyebrow">Long Hair Cut</p>
+                    <h3>Length. Shape. Movement.</h3>
+                    <p>
+                        A scissor-focused haircut designed to preserve your length
+                        while improving shape, texture and natural movement.
+                    </p>
+                </div>
+            </div>
+
+
+            <article class="service" onclick="toggleService(this)">
+                <div class="service-number">07</div>
+
+                <div class="service-info">
+                    <h3>Beard Trim</h3>
+                    <p>
+                        Precise beard shaping and trimming with a
+                        clean neckline and professional finish.
+                    </p>
+                </div>
+
+                <div class="service-price">
+                    <span class="service-hint">VIEW DETAILS ↗</span>
+                    $25
+                </div>
+            </article>
+
+            <div class="service-details">
+                <div class="service-details-image">
+                    <img class="beard-trim-img" src="imagens/beard-trim.jpg" alt="Beard trim">
+                </div>
+
+                <div class="service-details-content">
+                    <p class="eyebrow">Beard Trim</p>
+                    <h3>Defined. Clean. Precise.</h3>
+                    <p>
+                        Professional beard shaping and trimming with a clean
+                        neckline, defined edges and a finish tailored to your face.
+                    </p>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+            <div class="about-mark">
+                <span>NS</span>
+            </div>
+
+            <div class="about-content">
+
+                <p class="eyebrow">Since 2018 · Founded by Jake Miller</p>
+
+                <h2>
+                    YOUR<br>
+                    NEIGHBORHOOD<br>
+                    BARBER.
+                </h2>
+
+                <p>
+                    Northside Barber Co. is a neighborhood shop built
+                    around great haircuts, sharp details and a relaxed
+                    atmosphere.
+                </p>
+
+                <p>
+                    We keep things simple: skilled barbers, quality
+                    products and enough time to get your cut right.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials">
+
+            <div class="testimonials-heading">
+                <p class="eyebrow">What clients say</p>
+
+                <h2>
+                    GOOD<br>
+                    WORDS.
+                </h2>
+            </div>
+
+
+            <div class="testimonial-list">
+
+                <article class="testimonial">
+                    <span class="testimonial-mark">“</span>
+
+                    <p>
+                        Easily the best cut I've had in years.
+                        Great attention to detail and a relaxed atmosphere.
+                    </p>
+
+                    <strong>— Marcus T.</strong>
+                </article>
+
+
+                <article class="testimonial">
+                    <span class="testimonial-mark">“</span>
+
+                    <p>
+                        These guys know their craft. I always leave
+                        feeling like I got exactly what I asked for.
+                    </p>
+
+                    <strong>— Daniel R.</strong>
+                </article>
+
+
+                <article class="testimonial">
+                    <span class="testimonial-mark">“</span>
+
+                    <p>
+                        Friendly barbers, great music and a consistently
+                        clean cut. Northside is my go-to spot.
+                    </p>
+
+                    <strong>— James K.</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+
+            <div class="contact-heading">
+
+                <p class="eyebrow">Ready when you are</p>
+
+                <h2>
+                    SIT<br>
+                    DOWN.<br>
+                    GET<br>
+                    SHARP.
+                </h2>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <strong>Walk-ins welcome.</strong>
+                <p>Appointments are recommended, especially on weekends.</p>
+
+                <div class="contact-block">
+                    <span>Address</span>
+                    <strong>
+                        214 Northside Avenue<br>
+                        Portland, OR
+                    </strong>
+                </div>
+
+                <div class="contact-block">
+                    <span>Phone</span>
+                    <strong>(503) 555-0184</strong>
+                </div>
+
+                <div class="contact-block">
+                    <span>Hours</span>
+                    <strong>
+                        Tue – Sat · 9AM – 7PM<br>
+                        Sun · 10AM – 4PM
+                    </strong>
+                </div>
+
+                <div class="contact-block">
+                    <span>Appointments</span>
+                    <strong>
+                        Walk-ins welcome<br>
+                        Booking recommended on weekends
+                    </strong>
+                </div>
+
+                <a href="#contact" class="main-button contact-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <strong>NORTHSIDE BARBER CO.</strong>
+
+        <div class="footer-right">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <span>© 2026 Northside Barber Co.</span>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
