@@ -4,333 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Voltline Electrical</title>
-    <meta name="description" content="Voltline Electrical — Electrical services for homes and businesses in Austin, Texas.">
-
+    <meta name="theme-color" content="#101f33">
+    <meta name="description" content="Residential and commercial electrical services in Austin, TX. Clear troubleshooting, considered upgrades and a straightforward plan.">
+    <title>Voltline Electrical — Austin, TX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="utility-bar">
+        <span>AUSTIN, TEXAS <i aria-hidden="true">/</i> ELECTRICAL SERVICES</span>
+        <span>RESIDENTIAL <b>+</b> COMMERCIAL</span>
+        <a href="tel:+15125550184">CALL THE SHOP <span aria-hidden="true">↗</span></a>
+    </div>
 
     <header class="site-header">
-        <a href="#" class="logo">
-            <img src="images/voltline-logo.png" 
-        alt="Voltline Electrical">
+        <a class="brand" href="#top" aria-label="Voltline Electrical home">
+            <img src="images/voltline-logo.png" alt="Voltline Electrical">
         </a>
 
-        <nav class="navigation">
-            <a href="#diagnostic">Get Help</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation">
+            <span></span><span></span>
+        </button>
+
+        <nav class="navigation" id="site-navigation" aria-label="Main navigation">
+            <a href="#services"><span>01</span> Services</a>
+            <a href="#diagnostic"><span>02</span> Find a starting point</a>
+            <a href="#field-notes"><span>03</span> Field notes</a>
+            <a class="nav-contact" href="#contact">Get in touch <b aria-hidden="true">↗</b></a>
         </nav>
-
-        <a href="tel:+15125550184" class="call-button">
-            Call Now
-        </a>
     </header>
 
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero-image" src="images/Voltline-image1.png" alt="Electricians inspecting a commercial electrical panel">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <div class="hero-grid" aria-hidden="true"></div>
 
-    <main>
-
-        <!-- DIAGNOSTIC INTRO AND CONSOLE -->
-
-        <section class="diagnostic" id="diagnostic">
-
-            <div class="diagnostic-art" aria-hidden="true">
-                <span class="diagnostic-tech-label diagnostic-tech-label-bottom">VOLTLINE / AUSTIN TX</span>
-                <span class="diagnostic-measurement"></span>
-                <span class="diagnostic-schematic"><i></i><i></i><i></i></span>
-                <span class="diagnostic-crop diagnostic-crop-top"></span>
-                <span class="diagnostic-crop diagnostic-crop-bottom"></span>
-                <span class="diagnostic-panel-callout"></span>
-                <span class="diagnostic-baseline"></span>
+            <div class="hero-meta">
+                <span><i></i> FIELD SERVICES / ATX</span>
+                <span>EST. FOR THE EVERYDAY</span>
             </div>
 
-            <div class="diagnostic-intro">
-                <p class="eyebrow">Electrical help · Austin, TX</p>
-
-                <h1>What's going on?</h1>
-
-                <p>
-                    Choose a starting point and we'll help you figure out what comes next.
-                </p>
-
-                <button class="diagnostic-start" id="diagnostic-start" type="button" aria-controls="problem-console" aria-expanded="false">
-                    Select your problem <span aria-hidden="true">→</span>
-                </button>
+            <div class="hero-copy">
+                
+                <h1 id="hero-title">Good work<br><em>Clear current</em></h1>
+                <p>Electrical service for the places you live, work and build. Straight answers, careful work, and a plan you can understand.</p>
+                <div class="hero-actions">
+                    <a class="hero-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+                    <a class="hero-secondary" href="#services">See what we do <span aria-hidden="true">↓</span></a>
+                </div>
             </div>
 
-
-            <div class="diagnostic-stage">
-
-                <div class="problem-console" id="problem-console" role="region" aria-label="Electrical problem options" aria-hidden="true" inert>
-
-                <div class="console-header">
-                    <span>01</span>
-                    <strong id="console-title">SELECT A PROBLEM</strong>
-                    <button class="console-back" type="button">← BACK</button>
-                </div>
-
-
-                <div class="problem-grid">
-
-                    <button class="problem-card" data-problem="flickering">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M8.5 14.5a7 7 0 1 1 7 0c-.8.6-1.2 1.5-1.3 2.5h-4.4c-.1-1-.5-1.9-1.3-2.5Z"/><path d="M12 1v2M3.5 4.5 5 6M20.5 4.5 19 6"/></svg></span>
-                        <strong>Lights are flickering</strong>
-                        <small>Flickering, dimming or unstable lights</small>
-                    </button>
-
-                    <button class="problem-card" data-problem="breaker">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><path d="M8 6h8M8 18h8M12 15V9M12 9l3-2"/><circle cx="12" cy="15" r=".7" fill="currentColor" stroke="none"/></svg></span>
-                        <strong>Breaker keeps tripping</strong>
-                        <small>A breaker won't stay on</small>
-                    </button>
-
-                    <button class="problem-card" data-problem="outlet">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M9 9v3M15 9v3M12 15v.5"/></svg></span>
-                        <strong>Outlet isn't working</strong>
-                        <small>One or more outlets have no power</small>
-                    </button>
-
-                    <button class="problem-card" data-problem="outage">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.5 2 5 13h6l-.5 9L19 11h-6l.5-9Z"/></svg></span>
-                        <strong>Power went out</strong>
-                        <small>Part or all of the property lost power</small>
-                    </button>
-
-                    <button class="problem-card" data-problem="wiring">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h5a3 3 0 0 1 3 3v4a3 3 0 0 0 3 3h7M3 17h2M21 5v4M19 5v4"/><path d="M3 5v4"/></svg></span>
-                        <strong>Need new wiring</strong>
-                        <small>Renovation, addition or electrical project</small>
-                    </button>
-
-                    <button class="problem-card" data-problem="unsafe">
-                        <span class="problem-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 2.8 19a1.3 1.3 0 0 0 1.1 2h16.2a1.3 1.3 0 0 0 1.1-2L12 3Z"/><path d="M12 9v5M12 17.5v.1"/></svg></span>
-                        <strong>Something feels unsafe</strong>
-                        <small>Burning smell, sparks, heat or shocks</small>
-                    </button>
-
-                </div>
-
-
-                <div class="console-footer">
-                    <span>Not sure what's wrong?</span>
-
-                    <button class="describe-button" data-problem="unknown">
-                        Describe my problem →
-                    </button>
-                </div>
-
-                </div>
-
+            <div class="hero-coordinate" aria-hidden="true">
+                <span>30°16' N</span><span>97°44' W</span>
             </div>
 
+            <div class="hero-index" aria-hidden="true">
+                <span>VLT / 001</span>
+                <span class="index-line"></span>
+                <span>SAFE BY DESIGN</span>
+            </div>
+
+            <a class="hero-scroll" href="#services"><span></span> SCROLL TO EXPLORE</a>
         </section>
 
+        <section class="signal-band" aria-label="Voltline service principles">
+            <div class="signal-label"><span class="signal-dot"></span> THE VOLTLINE STANDARD</div>
+            <p>Diagnose <b>→</b> Explain <b>→</b> Do it right</p>
+            <span class="signal-code">VL—TX / 26</span>
+        </section>
 
-        <!-- DIAGNOSTIC QUESTIONS -->
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="section-topline">
+                <span>01 / SERVICE INDEX</span>
+                <span>BUILT AROUND YOUR PROPERTY</span>
+            </div>
 
-        <section class="diagnostic-flow" id="diagnostic-flow">
+            <div class="services-intro">
+                <h2 id="services-title">What needs<br><em>powering?</em></h2>
+                <p>From an outlet that stopped working to a full system upgrade, start with the issue in front of you. We'll help make the next step clear.</p>
+            </div>
 
-            <div class="flow-inner">
+            <div class="service-board">
+                <a class="service-row" href="#diagnostic">
+                    <span class="service-code">01</span>
+                    <span class="service-symbol" aria-hidden="true">↯</span>
+                    <span class="service-name">Repairs &amp; troubleshooting</span>
+                    <span class="service-detail">Breakers, outlets, switches, flickering lights</span>
+                    <span class="service-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="service-row" href="#contact">
+                    <span class="service-code">02</span>
+                    <span class="service-symbol" aria-hidden="true">▤</span>
+                    <span class="service-name">Panels &amp; inspections</span>
+                    <span class="service-detail">Panel upgrades, capacity and system checks</span>
+                    <span class="service-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="service-row" href="#contact">
+                    <span class="service-code">03</span>
+                    <span class="service-symbol" aria-hidden="true">✳</span>
+                    <span class="service-name">Lighting &amp; installation</span>
+                    <span class="service-detail">Fixtures, indoor and outdoor lighting, new circuits</span>
+                    <span class="service-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="service-row" href="#contact">
+                    <span class="service-code">04</span>
+                    <span class="service-symbol" aria-hidden="true">⌁</span>
+                    <span class="service-name">Wiring &amp; EV charging</span>
+                    <span class="service-detail">Renovations, additions and home charging</span>
+                    <span class="service-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
 
-                <div class="flow-progress">
-                    <span class="flow-step">01</span>
-                    <span class="flow-line"></span>
-                    <span class="flow-total">02</span>
+            <div class="services-foot">
+                <span>NOT SURE WHERE YOUR PROJECT FITS?</span>
+                <a href="#diagnostic">Find a starting point <b aria-hidden="true">↓</b></a>
+            </div>
+        </section>
+
+        <section class="diagnostic" id="diagnostic" aria-labelledby="diagnostic-title">
+            <div class="diagnostic-topline">
+                <span>02 / QUICK TRIAGE</span>
+                <span>NO GUESSWORK. JUST A STARTING POINT.</span>
+            </div>
+
+            <div class="diagnostic-layout">
+                <div class="diagnostic-heading">
+                    <p class="section-kicker"><span></span> TELL US WHAT YOU'RE SEEING</p>
+                    <h2 id="diagnostic-title">Where should<br>we <em>start?</em></h2>
+                    <p>Choose the closest match. This quick guide can't diagnose an electrical issue, but it can help you decide what to do next.</p>
+                    <div class="diagnostic-note"><span>!</span> If you see smoke or an active fire, move to a safe place and call 911.</div>
                 </div>
 
-
-                <div class="flow-content">
-
-                    <p class="eyebrow" id="flow-category">
-                        Electrical problem
-                    </p>
-
-                    <h2 id="flow-question">
-                        How many lights are affected?
-                    </h2>
-
-                    <div class="answer-grid" id="answer-grid">
-                        <!-- JavaScript inserts answers here -->
+                <div class="triage-tool">
+                    <div class="triage-toolbar">
+                        <span><i></i> VOLTLINE / INTAKE</span>
+                        <span>SELECT ONE</span>
                     </div>
-
+                    <div class="triage-options" role="group" aria-label="Choose the electrical issue">
+                        <button class="triage-option" type="button" data-advice="Repeated breaker trips can have several causes. Don't keep resetting a breaker that trips again; an electrician can inspect the circuit.">
+                            <span>01</span> A breaker keeps tripping <b aria-hidden="true">↗</b>
+                        </button>
+                        <button class="triage-option" type="button" data-advice="Flickering lights can come from a bulb, fixture, connection or circuit. If multiple lights flicker or the issue persists, arrange an inspection.">
+                            <span>02</span> Lights flicker or dim <b aria-hidden="true">↗</b>
+                        </button>
+                        <button class="triage-option" type="button" data-advice="A dead outlet may be part of a larger circuit issue. Avoid opening it or attempting electrical repairs; describe what stopped working when you contact an electrician.">
+                            <span>03</span> An outlet stopped working <b aria-hidden="true">↗</b>
+                        </button>
+                        <button class="triage-option" type="button" data-advice="For a burning smell, sparks or a hot electrical component, don't touch or use the affected equipment. Move away and contact emergency services if there is smoke or fire.">
+                            <span>04</span> Something seems unsafe <b aria-hidden="true">↗</b>
+                        </button>
+                    </div>
+                    <div class="triage-result" id="triage-result" aria-live="polite">
+                        <span class="result-prompt">YOUR NEXT STEP WILL APPEAR HERE</span>
+                        <p>Pick an option above to see general guidance.</p>
+                    </div>
+                    <div class="triage-footer">
+                        <span>GENERAL INFORMATION ONLY</span>
+                        <a href="#contact">Talk to Voltline <b aria-hidden="true">↗</b></a>
+                    </div>
                 </div>
-
-
-                <button class="back-button" id="back-button">
-                    ← Back
-                </button>
-
             </div>
-
         </section>
 
-
-        <!-- RESULT -->
-
-        <section class="diagnostic-result" id="diagnostic-result">
-
-            <div class="result-inner">
-
-                <div class="result-status">
-                    <span class="status-dot"></span>
-                    <span>YOUR NEXT STEP</span>
+        <section class="field-notes" id="field-notes" aria-labelledby="field-title">
+            <div class="field-head">
+                <div>
+                    <p class="section-kicker"><span></span> VISUAL REFERENCE / NOT A PROJECT GALLERY</p>
+                    <h2 id="field-title">A closer look at<br><em>the work.</em></h2>
                 </div>
-
-                <h2 id="result-title">
-                    Let's take a closer look.
-                </h2>
-
-                <p id="result-description">
-                    Based on what you've told us, an electrician can inspect
-                    the issue and identify the cause.
-                </p>
-
-                <div class="result-actions">
-                    <a href="#contact" class="result-button">
-                        Request a service visit →
-                    </a>
-
-                    <a href="tel:+15125550184" class="result-call">
-                        Or call (512) 555-0184
-                    </a>
-                </div>
-
+                <p>These images illustrate common electrical services. They are not verified Voltline installations.</p>
             </div>
 
+            <div class="field-gallery">
+                <figure class="field-image field-panel">
+                    <img src="images/project-panel.png" alt="Illustrative image of an electrician working at an electrical panel" loading="lazy">
+                    <figcaption><span>FIG. 01</span> PANEL WORK / ILLUSTRATIVE</figcaption>
+                </figure>
+                <figure class="field-image field-lighting">
+                    <img src="images/project-lighting.png" alt="Illustrative image of a residential lighting installation" loading="lazy">
+                    <figcaption><span>FIG. 02</span> LIGHTING / ILLUSTRATIVE</figcaption>
+                </figure>
+                <figure class="field-image field-ev">
+                    <img src="images/project-ev-charger.jpeg" alt="Illustrative image of a residential EV charger" loading="lazy">
+                    <figcaption><span>FIG. 03</span> EV CHARGING / ILLUSTRATIVE</figcaption>
+                </figure>
+            </div>
+            <p class="image-note">Images shown as provided, including their original watermarks. Replace with properly licensed, unwatermarked photography for a live business site.</p>
         </section>
 
-
-        <!-- SERVICES -->
-
-        <section class="services" id="services">
-
-            <div class="services-heading">
-                <p class="eyebrow">What we work on</p>
-                <h2>Electrical services for homes and businesses</h2>
+        <section class="method" aria-labelledby="method-title">
+            <div class="method-heading">
+                <span>03 / HOW WE WORK</span>
+                <h2 id="method-title">Less mystery.<br><em>More method.</em></h2>
             </div>
-
-            <div class="service-matrix">
-
-                <a href="#diagnostic" class="service-item">
-                    <span>01</span>
-                    <strong>Electrical Repairs</strong>
-                    <small>Faults, outlets, switches & circuits</small>
-                </a>
-
-                <a href="#diagnostic" class="service-item">
-                    <span>02</span>
-                    <strong>Panel Upgrades</strong>
-                    <small>Modernize outdated electrical panels</small>
-                </a>
-
-                <a href="#diagnostic" class="service-item">
-                    <span>03</span>
-                    <strong>Lighting</strong>
-                    <small>Indoor, outdoor & fixture installation</small>
-                </a>
-
-                <a href="#diagnostic" class="service-item">
-                    <span>04</span>
-                    <strong>EV Chargers</strong>
-                    <small>Home charging equipment installation</small>
-                </a>
-
-                <a href="#diagnostic" class="service-item">
-                    <span>05</span>
-                    <strong>New Wiring</strong>
-                    <small>Renovations, additions & new circuits</small>
-                </a>
-
-                <a href="#diagnostic" class="service-item">
-                    <span>06</span>
-                    <strong>Electrical Inspections</strong>
-                    <small>Identify potential electrical issues</small>
-                </a>
-
+            <div class="method-track">
+                <article class="method-step">
+                    <span class="method-number">01</span>
+                    <span class="method-rule"></span>
+                    <h3>Listen</h3>
+                    <p>We start with what you've noticed and what you need from the space.</p>
+                </article>
+                <article class="method-step">
+                    <span class="method-number">02</span>
+                    <span class="method-rule"></span>
+                    <h3>Inspect</h3>
+                    <p>We look for the cause and explain the options in plain language.</p>
+                </article>
+                <article class="method-step">
+                    <span class="method-number">03</span>
+                    <span class="method-rule"></span>
+                    <h3>Resolve</h3>
+                    <p>You know the plan before work begins and what to expect next.</p>
+                </article>
             </div>
-
+            <div class="method-stamp" aria-hidden="true">CLEAR<br>FROM<br>THE START</div>
         </section>
 
-
-        <!-- ABOUT -->
-
-        <section class="about" id="about">
-
-            <div class="about-label">
-                <span>VOLTLINE</span>
-                <span>AUSTIN · TX</span>
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact-topline"><span>04 / CONTACT</span><span>AUSTIN, TX</span></div>
+            <div class="contact-main">
+                <p class="section-kicker"><span></span> HAVE A QUESTION OR A PROJECT?</p>
+                <h2 id="contact-title">Let's get<br><em>connected.</em></h2>
+                <p class="contact-copy">Give us a call or send a note. Tell us what you're working on and we'll help you find a sensible next step.</p>
             </div>
-
-            <div class="about-content">
-
-                <p class="eyebrow">Straightforward electrical work</p>
-
-                <h2>
-                    Clear answers.<br>
-                    Proper work.
-                </h2>
-
-                <p>
-                    Voltline Electrical helps homeowners and businesses
-                    solve electrical problems, improve existing systems
-                    and plan new installations.
-                </p>
-
-                <p>
-                    We focus on clear communication, accurate diagnostics
-                    and quality work. Our goal is to make sure you know
-                    exactly what the problem is, what it will take to fix
-                    it and how much it will cost.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="contact" id="contact">
-
-            <div class="contact-copy">
-
-                <p class="eyebrow">Ready to get started?</p>
-
-                <h2>Tell us<br>what you need.</h2>
-
-            </div>
-
             <div class="contact-actions">
-
-                <a href="tel:+15125550184" class="contact-button">
-                    Call (512) 555-0184
-                </a>
-
-                <a href="mailto:hello.voltline@hotmail.com" class="contact-email">
-                    hello.voltline@hotmail.com
-                </a>
-
+                <a class="phone-link" href="tel:+15125550184"><span>CALL VOLTLINE</span>(512) 555-0184 <b aria-hidden="true">↗</b></a>
+                <a class="email-link" href="mailto:voltline.electrical@hotmail.com"><span>OR EMAIL</span>voltline.electrical@hotmail.com</a>
             </div>
-
+            <span class="contact-circuit" aria-hidden="true"></span>
         </section>
-
     </main>
 
-
     <footer class="site-footer">
-
-        <strong>VOLTLINE ELECTRICAL</strong>
-
-        <span>© 2026 Voltline Electrical · Austin, TX</span>
-
+        <a class="footer-brand" href="#top"><img src="images/voltline-logo.png" alt="Voltline Electrical"></a>
+        <span>AUSTIN, TEXAS <i>·</i> RESIDENTIAL + COMMERCIAL</span>
+        <span>© 2026 VOLTLINE</span>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 
 </html>

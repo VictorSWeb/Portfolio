@@ -1,7 +1,5 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
-const triageOptions = document.querySelectorAll(".triage-option");
-const triageResult = document.querySelector("#triage-result");
 
 function closeNavigation(restoreFocus = false) {
     menuToggle.setAttribute("aria-expanded", "false");
@@ -23,22 +21,6 @@ menuToggle.addEventListener("click", () => {
 
 navigation.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => closeNavigation());
-});
-
-triageOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        triageOptions.forEach(item => item.classList.remove("is-selected"));
-        option.classList.add("is-selected");
-
-        const prompt = document.createElement("span");
-        prompt.className = "result-prompt";
-        prompt.textContent = "A PLACE TO START";
-
-        const guidance = document.createElement("p");
-        guidance.textContent = option.dataset.advice;
-
-        triageResult.replaceChildren(prompt, guidance);
-    });
 });
 
 document.addEventListener("keydown", event => {
