@@ -311,7 +311,7 @@ nav a:hover,
 }
 
 .hero-project:hover {
-    z-index: 3;
+    z-index: 10;
     border-color: var(--accent);
 }
 
@@ -351,6 +351,20 @@ nav a:hover,
 
 .hero-project-voltline:hover {
     transform: rotate(1deg) translateY(-5px);
+}
+
+.hero-project-smash {
+    z-index: 3;
+    top: 105px;
+    right: 0;
+    width: 68%;
+    height: 235px;
+    border-radius: 3px;
+    transform: none;
+}
+
+.hero-project-smash:hover {
+    transform: translateY(-5px);
 }
 
 .hero-project-label {
@@ -892,6 +906,11 @@ nav a:hover,
         height: 260px;
     }
 
+    .hero-project-smash {
+        top: 94px;
+        height: 210px;
+    }
+
     .hero-project-label {
         align-items: flex-start;
         flex-direction: column;
@@ -1052,6 +1071,13 @@ nav a:hover,
         bottom: 19px;
         width: 78%;
         height: 235px;
+    }
+
+    .hero-project-smash {
+        top: 85px;
+        right: 0;
+        width: 68%;
+        height: 195px;
     }
 
     .hero-project-label {
@@ -1228,6 +1254,11 @@ nav a:hover,
 
     .hero-project-voltline {
         height: 200px;
+    }
+
+    .hero-project-smash {
+        top: 78px;
+        height: 175px;
     }
 
     .project-details {

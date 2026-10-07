@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f2e9">
+    <title>Track your order — Smash & Co.</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="status.css">
+</head>
+<body>
+    <div class="announcement">Your smash is in the works ✳</div>
+    <header class="site-header"><div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Smash & Co. home"><img src="images/logo-smash-co-burguer.png" alt="Smash & Co."></a>
+        <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="menu.html">Menu</a></nav>
+        <a href="cart.html" class="header-cart">Cart <span class="cart-count">0</span></a>
+    </div></header>
+    <main class="container tracking-page">
+        <section class="page-title"><div class="eyebrow">Almost real-time order tracking</div><h1>WHERE’S MY<br>SMASH?</h1><p class="page-description" id="tracking-message">Looking up your order...</p></section>
+        <section class="tracking-card" aria-live="polite">
+            <div class="tracking-header"><div><div class="eyebrow">Smash & Co. delivery</div><h2 id="order-title">Order</h2></div><div class="eta" id="eta">Loading</div></div>
+            <div class="timeline">
+                <div class="step" id="step-0"><span class="step-dot">✓</span><div class="step-content"><h3>Order confirmed</h3><p>We’ve got your order and are getting things ready.</p></div></div>
+                <div class="step" id="step-1"><span class="step-dot">02</span><div class="step-content"><h3>On the griddle</h3><p>Your smash is being made fresh to order.</p></div></div>
+                <div class="step" id="step-2"><span class="step-dot">03</span><div class="step-content"><h3>Out for delivery</h3><p>Your driver is on the way.</p></div></div>
+                <div class="step" id="step-3"><span class="step-dot">04</span><div class="step-content"><h3>Delivered!</h3><p>Now for the best part. Enjoy every bite!</p></div></div>
+            </div>
+            <div class="tracking-footer">Portfolio demo. Status updates are simulated and do not represent a real delivery.</div>
+        </section>
+        <div class="tracking-back"><a href="menu.html" class="btn btn-secondary">Back to the menu</a></div>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><a href="index.html" class="logo" aria-label="Smash & Co. home"><img src="images/logo-smash-co-burguer.png" alt="Smash & Co."></a><p>Made on the griddle, with love. © 2026 Smash & Co.</p><div class="footer-links"><a href="cart.html">My cart</a></div></div></footer>
+    <script src="catalog.js"></script>
+    <script src="cart.js"></script>
+    <script src="tracking.js"></script>
+</body>
+</html>
