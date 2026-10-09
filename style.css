@@ -137,6 +137,47 @@ nav a:hover,
     color: var(--accent);
 }
 
+.language-switch {
+    min-height: 34px;
+    padding: 3px 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(241, 240, 233, 0.035);
+}
+
+.language-globe {
+    margin: 0 4px 0 2px;
+    color: var(--accent);
+    font-size: 13px;
+}
+
+.language-option {
+    min-width: 30px;
+    min-height: 26px;
+    padding: 0 6px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font: 700 9px var(--sans);
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.language-option:hover,
+.language-option.is-active {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+.language-divider {
+    color: #777d72;
+    font-size: 9px;
+}
+
 .menu-toggle {
     display: none;
 }
@@ -580,7 +621,7 @@ nav a:hover,
     letter-spacing: 0.12em;
 }
 
-.project-number span {
+.project-number > span:first-child {
     padding: 0 5px;
     color: #9ba18f;
 }
@@ -680,7 +721,7 @@ nav a:hover,
     line-height: 1.7;
 }
 
-.concept-note span {
+.concept-note > span:first-child {
     flex: 0 0 auto;
     color: #5a7142;
     font-size: 8px;
@@ -833,6 +874,32 @@ nav a:hover,
     margin-top: 27px;
 }
 
+.contact-button,
+.button-whatsapp {
+    display: flex;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button-whatsapp {
+    margin-top: 12px;
+    border: 1px solid rgba(198, 243, 106, 0.52);
+    color: var(--paper);
+}
+
+.button-whatsapp:hover {
+    background: rgba(198, 243, 106, 0.1);
+}
+
+.whatsapp-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    fill: currentColor;
+    color: var(--accent);
+}
+
 .contact-email {
     width: fit-content;
     margin: 18px auto 0;
@@ -938,6 +1005,10 @@ nav a:hover,
     }
 }
 
+html[lang="pt-BR"] .hero h1 {
+    font-size: clamp(48px, 5.2vw, 70px);
+}
+
 @media (max-width: 680px) {
     html {
         scroll-padding-top: 20px;
@@ -945,7 +1016,7 @@ nav a:hover,
 
     .nav-wrap {
         min-height: 68px;
-        gap: 13px;
+        gap: 8px;
     }
 
     .logo {
@@ -955,7 +1026,7 @@ nav a:hover,
     .menu-toggle {
         width: 41px;
         height: 41px;
-        margin-left: auto;
+        order: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1008,6 +1079,12 @@ nav a:hover,
         display: none;
     }
 
+    .language-switch {
+        flex: 0 0 auto;
+        margin-left: auto;
+        order: 1;
+    }
+
     .hero {
         min-height: 0;
         height: auto;
@@ -1030,6 +1107,10 @@ nav a:hover,
         font-size: clamp(49px, 12vw, 72px);
     }
 
+    html[lang="pt-BR"] .hero h1 {
+        font-size: clamp(46px, 11vw, 66px);
+    }
+
     .hero-intro {
         max-width: 490px;
         margin-top: 17px;
@@ -1047,6 +1128,12 @@ nav a:hover,
         min-height: 46px;
         padding: 0 14px;
         font-size: 9px;
+    }
+
+    .button-whatsapp {
+        gap: 8px;
+        padding: 0 10px;
+        font-size: 8px;
     }
 
     .hero-footnote {
