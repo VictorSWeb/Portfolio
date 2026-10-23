@@ -8,7 +8,7 @@
     --accent: #c6f36a;
     --accent-dim: #98bb4a;
     --sans: "DM Sans", Arial, sans-serif;
-    --display: "Space Grotesk", sans-serif;
+    --display: "Newsreader", Georgia, serif;
     --gutter: clamp(22px, 6vw, 92px);
 }
 
@@ -94,10 +94,10 @@ button:focus-visible {
 
 .logo {
     flex: 0 0 auto;
-    font-family: var(--display);
+    font-family: var(--sans);
     font-size: 19px;
     font-weight: 700;
-    letter-spacing: -0.07em;
+    letter-spacing: -0.05em;
 }
 
 .logo > span:first-child {
@@ -212,21 +212,9 @@ nav a:hover,
 
 .eyebrow {
     color: var(--accent);
-    font-size: 9px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 600;
     line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 1.45px;
-}
-
-.status-dot {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin: 0 9px 1px 0;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px rgba(198, 243, 106, 0.55);
 }
 
 .hero h1,
@@ -237,13 +225,13 @@ nav a:hover,
 .contact-inner h2 {
     font-family: var(--display);
     font-weight: 500;
-    letter-spacing: -0.075em;
+    letter-spacing: -0.035em;
 }
 
 .hero h1 {
     margin: 26px 0 0;
     font-size: clamp(54px, 6.1vw, 82px);
-    line-height: 0.99;
+    line-height: 1.03;
 }
 
 .hero h1 em,
@@ -253,7 +241,7 @@ nav a:hover,
 .about-copy h2 em,
 .contact-inner h2 em {
     color: var(--accent);
-    font-style: normal;
+    font-style: italic;
 }
 
 .hero-intro {
@@ -345,9 +333,9 @@ nav a:hover,
     position: absolute;
     overflow: hidden;
     display: block;
-    border: 1px solid rgba(241, 240, 233, 0.45);
+    border: 1px solid rgba(242, 238, 230, 0.3);
     background: #22251f;
-    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 15px 38px rgba(0, 0, 0, 0.28);
     transition: transform 250ms ease, border-color 250ms ease;
 }
 
@@ -374,11 +362,11 @@ nav a:hover,
     left: 0;
     width: 76%;
     height: 335px;
-    transform: rotate(-3deg);
+    transform: none;
 }
 
 .hero-project-barber:hover {
-    transform: rotate(-1deg) translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .hero-project-voltline {
@@ -387,11 +375,11 @@ nav a:hover,
     bottom: 29px;
     width: 74%;
     height: 330px;
-    transform: rotate(3deg);
+    transform: none;
 }
 
 .hero-project-voltline:hover {
-    transform: rotate(1deg) translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .hero-project-smash {
@@ -424,22 +412,12 @@ nav a:hover,
 
 .hero-project-label span {
     color: var(--accent);
-    font-size: 7px;
-    letter-spacing: 0.08em;
+    font-size: 9px;
 }
 
 .hero-project-label b {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 600;
-}
-
-.hero-index {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #92978e;
-    font-size: 7px;
-    letter-spacing: 0.12em;
 }
 
 .scroll-cue {
@@ -528,14 +506,6 @@ nav a:hover,
     border: 1px solid rgba(17, 19, 16, 0.15);
 }
 
-.project-visual::after {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, rgba(17, 19, 16, 0.3), transparent 35%);
-    content: "";
-    pointer-events: none;
-}
-
 .project-visual > img {
     width: 100%;
     height: 100%;
@@ -548,82 +518,14 @@ nav a:hover,
     transform: scale(1.025);
 }
 
-.browser-bar {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 30px;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(17, 19, 16, 0.91);
-    color: #aeb4a9;
-}
-
-.browser-bar i {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #74796f;
-}
-
-.browser-bar i:first-child {
-    background: #bd765f;
-}
-
-.browser-bar i:nth-child(2) {
-    background: #d4b35f;
-}
-
-.browser-bar i:nth-child(3) {
-    background: #8da76a;
-}
-
-.browser-bar > span {
-    margin-left: 9px;
-    font-size: 7px;
-    letter-spacing: 0.08em;
-}
-
-.visual-link {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    min-height: 28px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--ink);
-    color: var(--paper);
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-}
-
-.visual-link b {
-    color: var(--accent);
-    font-size: 12px;
-}
-
 .project-copy {
     padding: 12px 0;
 }
 
-.project-number {
-    color: #697168;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-}
-
-.project-number > span:first-child {
-    padding: 0 5px;
-    color: #9ba18f;
+.project-kicker {
+    color: #756e63;
+    font-size: 11px;
+    line-height: 1.5;
 }
 
 .project-copy h3 {
@@ -661,10 +563,9 @@ nav a:hover,
 }
 
 .project-details span {
-    color: #72796c;
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    color: #635c53;
+    font-size: 10px;
+    font-weight: 600;
 }
 
 .project-details p {
@@ -672,20 +573,6 @@ nav a:hover,
     color: #535a54;
     font-size: 10px;
     line-height: 1.65;
-}
-
-.project-tags {
-    margin-top: 19px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.project-tags span {
-    padding: 5px 8px;
-    border: 1px solid rgba(17, 19, 16, 0.16);
-    color: #555e56;
-    font-size: 8px;
 }
 
 .project-link {
@@ -713,20 +600,11 @@ nav a:hover,
 .concept-note {
     margin-top: 70px;
     padding-top: 15px;
-    display: flex;
-    gap: 14px;
+    display: block;
     border-top: 1px solid rgba(17, 19, 16, 0.2);
     color: #686f67;
     font-size: 9px;
     line-height: 1.7;
-}
-
-.concept-note > span:first-child {
-    flex: 0 0 auto;
-    color: #5a7142;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
 }
 
 .approach-section {
@@ -1171,17 +1049,8 @@ html[lang="pt-BR"] .hero h1 {
         padding: 8px;
     }
 
-    .hero-project-label span {
-        font-size: 6px;
-    }
-
     .hero-project-label b {
         font-size: 8px;
-    }
-
-    .hero-index {
-        bottom: 0;
-        font-size: 6px;
     }
 
     .scroll-cue {
