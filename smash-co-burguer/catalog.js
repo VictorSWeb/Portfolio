@@ -1,116 +1,116 @@
 const menuProducts = [
     {
         id: "classic-smash",
-        name: "Classic Smash",
+        name: "Smash Clássico",
         category: "burgers",
         price: 12.9,
         emoji: "🍔",
         image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85",
-        description: "Two smashed beef patties, melted cheddar, pickles, and house sauce on a toasted brioche bun."
+        description: "Dois discos de carne prensados na chapa, cheddar derretido, picles e molho da casa no pão brioche tostado."
     },
     {
         id: "bbq-bacon",
-        name: "BBQ Bacon",
+        name: "Barbecue com Bacon",
         category: "burgers",
         price: 14.9,
         emoji: "🥓",
         image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=85",
-        description: "Handcrafted beef, crispy bacon, cheddar, caramelized onions, and smoky barbecue sauce."
+        description: "Carne artesanal, bacon crocante, cheddar, cebola caramelizada e molho barbecue defumado."
     },
     {
         id: "hot-smash",
-        name: "Hot Smash",
+        name: "Smash Picante",
         category: "burgers",
         price: 13.9,
         emoji: "🌶️",
         image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85",
-        description: "Two smashed beef patties, pepper jack, jalapeños, and our spicy house mayo."
+        description: "Dois discos de carne prensados na chapa, queijo pepper jack, jalapeños e maionese picante da casa."
     },
     {
         id: "mushroom-melt",
-        name: "Mushroom Melt",
+        name: "Cogumelos e Queijo",
         category: "burgers",
         price: 13.9,
         emoji: "🍄",
         image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85",
-        description: "Juicy beef, Swiss cheese, buttery mushrooms, and roasted garlic sauce."
+        description: "Carne suculenta, queijo suíço, cogumelos na manteiga e molho de alho assado."
     },
     {
         id: "veggie-smash",
-        name: "Veggie Smash",
+        name: "Smash Vegetariano",
         category: "burgers",
         price: 11.9,
         emoji: "🥬",
         image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=85",
-        description: "Plant-based patty, cheese, crisp lettuce, tomato, and herbed mayo."
+        description: "Disco vegetal, queijo, alface crocante, tomate e maionese com ervas."
     },
     {
         id: "classic-fries",
-        name: "House Fries",
+        name: "Batata da Casa",
         category: "sides",
         price: 4.9,
         emoji: "🍟",
         image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85",
-        description: "Golden, crispy on the outside and fluffy inside. Finished with our house seasoning."
+        description: "Dourada e crocante por fora, macia por dentro e finalizada com o tempero da casa."
     },
     {
         id: "loaded-fries",
-        name: "Loaded Fries",
+        name: "Batata Completa",
         category: "sides",
         price: 7.9,
         emoji: "🍟",
         image: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=85",
-        description: "Crispy fries loaded with creamy cheddar, bacon bits, and fresh scallions."
+        description: "Batatas crocantes cobertas com cheddar cremoso, bacon em pedaços e cebolinha fresca."
     },
     {
         id: "onion-rings",
-        name: "Onion rings",
+        name: "Anéis de Cebola",
         category: "sides",
         price: 5.9,
         emoji: "🧅",
         image: "https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=900&q=85",
-        description: "Beer-battered onion rings, made to order and served with house barbecue sauce."
+        description: "Anéis de cebola empanados na cerveja, preparados na hora e servidos com molho barbecue da casa."
     },
     {
         id: "house-lemonade",
-        name: "House Lemonade",
+        name: "Limonada da Casa",
         category: "drinks",
         price: 3.9,
         emoji: "🍋",
         image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85",
-        description: "Fresh-squeezed lemons, a hint of mint, and plenty of ice. 14 oz."
+        description: "Limões espremidos na hora, um toque de hortelã e bastante gelo. 414 ml."
     },
     {
         id: "cola",
-        name: "Ice-Cold Cola",
+        name: "Refrigerante de Cola",
         category: "drinks",
         price: 2.9,
         emoji: "🥤",
         image: "https://images.unsplash.com/photo-1581636625402-29b2a704ef13?auto=format&fit=crop&w=900&q=85",
-        description: "Classic cola, served ice cold. 12 oz."
+        description: "Refrigerante de cola clássico, servido bem gelado. 355 ml."
     },
     {
         id: "smash-combo",
-        name: "Classic Combo",
+        name: "Combo Clássico",
         category: "combos",
         price: 18.9,
         emoji: "🍔",
         image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85",
-        description: "A Classic Smash, house fries, and an ice-cold cola. The perfect trio."
+        description: "Um Smash Clássico, batata da casa e um refrigerante de cola bem gelado. O trio perfeito."
     },
     {
         id: "double-combo",
-        name: "Double Combo",
+        name: "Combo Duplo",
         category: "combos",
         price: 23.9,
         emoji: "🔥",
         image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=85",
-        description: "A BBQ Bacon, loaded fries, and two ice-cold colas. Made to share (if you want)."
+        description: "Um Barbecue com Bacon, batata completa e dois refrigerantes de cola bem gelados. Para dividir — se quiser."
     }
 ];
 
 function formatPrice(value) {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "USD"
     }).format(value);

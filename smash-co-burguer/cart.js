@@ -16,7 +16,7 @@ function getCart() {
         ) : [];
     } catch (error) {
         if (!(error instanceof SyntaxError)) throw error;
-        console.error("The saved cart was invalid and has been cleared.", error);
+        console.error("A sacola salva estava inválida e foi limpa.", error);
         localStorage.removeItem("cart");
         return [];
     }
@@ -39,7 +39,7 @@ function updateCartCount() {
     const count = getCart().reduce((total, item) => total + Number(item.quantity), 0);
     document.querySelectorAll(".cart-count").forEach(element => {
         element.textContent = count;
-        element.setAttribute("aria-label", `${count} items in cart`);
+        element.setAttribute("aria-label", `${count} itens na sacola`);
     });
 }
 
@@ -67,7 +67,7 @@ function getDeliveryFee() {
         deliveryInfo = JSON.parse(localStorage.getItem("deliveryInfo") || "null");
     } catch (error) {
         if (!(error instanceof SyntaxError)) throw error;
-        console.error("The saved delivery details were invalid.", error);
+        console.error("Os dados de entrega salvos estavam inválidos.", error);
         localStorage.removeItem("deliveryInfo");
     }
     if (deliveryInfo && deliveryInfo.speed === "priority") return 5.99;
@@ -89,7 +89,7 @@ function renderCart() {
     }
     const cart = getCart();
     if (!cart.length) {
-        container.innerHTML = `<div class="empty-state"><span class="empty-icon">🛍️</span><h2>Your next smash starts here.</h2><p>Your cart is empty. Pick your favorites from the menu.</p><a href="menu.html" class="btn btn-primary">Explore the menu <span>↗</span></a></div>`;
+        container.innerHTML = `<div class="empty-state"><span class="empty-icon">🛍️</span><h2>Seu próximo smash começa aqui.</h2><p>Sua sacola está vazia. Escolha seus favoritos no cardápio.</p><a href="menu.html" class="btn btn-primary">Ver o cardápio <span>↗</span></a></div>`;
         return;
     }
 
@@ -98,34 +98,34 @@ function renderCart() {
     const delivery = deliveryInfo ? getDeliveryFee() : null;
     container.innerHTML = `
         <div class="cart-layout">
-            <section class="cart-items" aria-label="Items in your cart">
+            <section class="cart-items" aria-label="Itens na sua sacola">
                 ${cart.map(item => `
                     <article class="cart-item">
                         <div class="cart-item-image">${item.image ? `<img src="${escapeHTML(item.image)}" alt="">` : escapeHTML(item.emoji || "🍔")}</div>
                         <div class="cart-item-info">
                             <h2>${escapeHTML(item.name)}</h2>
-                            <p>${escapeHTML(item.description || "Made fresh, the way we like it.")}</p>
-                            <button type="button" class="remove-item" data-action="remove" data-id="${escapeHTML(item.id)}">Remove</button>
+                            <p>${escapeHTML(item.description || "Preparado na hora, do jeito que a gente gosta.")}</p>
+                            <button type="button" class="remove-item" data-action="remove" data-id="${escapeHTML(item.id)}">Remover</button>
                         </div>
                         <div class="cart-item-right">
                             <strong>${formatPrice(item.price * item.quantity)}</strong>
                             <div class="cart-quantity">
-                                <button type="button" data-action="decrease" data-id="${escapeHTML(item.id)}" aria-label="Decrease quantity">−</button>
+                                <button type="button" data-action="decrease" data-id="${escapeHTML(item.id)}" aria-label="Diminuir quantidade">−</button>
                                 <span>${item.quantity}</span>
                                 <button type="button" data-action="increase" data-id="${escapeHTML(item.id)}" aria-label="Aumentar quantidade">+</button>
                             </div>
                         </div>
                     </article>`).join("")}
-                <a class="continue-shopping" href="menu.html">← Keep browsing</a>
+                <a class="continue-shopping" href="menu.html">← Continuar escolhendo</a>
             </section>
             <aside class="summary">
-                <h2>Order summary <span>✳</span></h2>
+                <h2>Resumo do pedido <span>✳</span></h2>
                 <div class="summary-row"><span>Subtotal</span><strong>${formatPrice(subtotal)}</strong></div>
-                <div class="summary-row"><span>Delivery</span><strong>${delivery === null ? "Calculated next" : formatPrice(delivery)}</strong></div>
+                <div class="summary-row"><span>Entrega</span><strong>${delivery === null ? "Calculada na próxima etapa" : formatPrice(delivery)}</strong></div>
                 <div class="summary-row total"><span>Total</span><strong>${formatPrice(subtotal + (delivery || 0))}</strong></div>
-                <p class="summary-note">${delivery === null ? "Delivery is calculated in the next step." : "Fee reflects your selected delivery speed."}</p>
-                <a href="delivery.html" class="btn btn-primary">Enter delivery details <span>→</span></a>
-                <div class="safe-checkout">🔒 Secure checkout · Demo order</div>
+                <p class="summary-note">${delivery === null ? "O valor da entrega será calculado na próxima etapa." : "A taxa varia conforme o prazo de entrega escolhido."}</p>
+                <a href="delivery.html" class="btn btn-primary">Informar endereço de entrega <span>→</span></a>
+                <div class="safe-checkout">🔒 Pagamento seguro · Pedido de demonstração</div>
             </aside>
         </div>`;
 
@@ -136,16 +136,16 @@ function renderCheckoutSummary(elementId) {
     if (!container) return;
     const cart = getCart();
     if (!cart.length) {
-        container.innerHTML = `<h2>Your cart is empty</h2><p>Head back to the menu and pick your favorites.</p><a href="menu.html" class="btn btn-primary">View the menu</a>`;
+        container.innerHTML = `<h2>Sua sacola está vazia</h2><p>Volte ao cardápio e escolha seus favoritos.</p><a href="menu.html" class="btn btn-primary">Ver o cardápio</a>`;
         return;
     }
     const subtotal = getSubtotal();
     const delivery = getDeliveryFee();
     container.innerHTML = `
-        <h2>Your order <span>${cart.reduce((sum, item) => sum + item.quantity, 0)} items</span></h2>
+        <h2>Seu pedido <span>${cart.reduce((sum, item) => sum + item.quantity, 0)} itens</span></h2>
         <div class="mini-items">${cart.map(item => `<div class="order-mini-item"><span>${item.quantity} × ${escapeHTML(item.name)}</span><strong>${formatPrice(item.price * item.quantity)}</strong></div>`).join("")}</div>
         <div class="summary-row"><span>Subtotal</span><strong>${formatPrice(subtotal)}</strong></div>
-        <div class="summary-row"><span>Delivery</span><strong>${formatPrice(delivery)}</strong></div>
+        <div class="summary-row"><span>Entrega</span><strong>${formatPrice(delivery)}</strong></div>
         <div class="checkout-total"><span>Total</span><strong>${formatPrice(subtotal + delivery)}</strong></div>`;
 }
 

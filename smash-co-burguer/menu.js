@@ -1,15 +1,15 @@
 const grid = document.getElementById("product-grid");
 const search = document.getElementById("search");
 const categoryButtons = document.querySelectorAll(".category-btn");
-const categoryNames = { burgers: "burgers", sides: "sides", drinks: "drinks", combos: "combos" };
+const categoryNames = { burgers: "Hambúrgueres", sides: "Acompanhamentos", drinks: "Bebidas", combos: "Combos" };
 const requestedCategory = new URLSearchParams(window.location.search).get("category");
 let currentCategory = ["burgers", "sides", "drinks", "combos"].includes(requestedCategory) ? requestedCategory : "all";
 
 function renderProducts() {
-    const query = search.value.trim().toLocaleLowerCase("en-US");
+    const query = search.value.trim().toLocaleLowerCase("pt-BR");
     const filtered = menuProducts.filter(product => {
         const categoryMatch = currentCategory === "all" || product.category === currentCategory;
-        const searchMatch = `${product.name} ${product.description}`.toLocaleLowerCase("en-US").includes(query);
+        const searchMatch = `${product.name} ${product.description}`.toLocaleLowerCase("pt-BR").includes(query);
         return categoryMatch && searchMatch;
     });
 
@@ -24,7 +24,7 @@ function renderProducts() {
             <article class="product-card">
                 <a class="product-image" href="product.html?id=${encodeURIComponent(product.id)}" aria-label="Ver ${escapeHTML(product.name)}">
                     <img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.name)}" loading="lazy">
-                    <span class="product-badge">${product.category === "combos" ? "Fan favorite" : "Made fresh"}</span>
+                    <span class="product-badge">${product.category === "combos" ? "Favorito da casa" : "Feito na hora"}</span>
                 </a>
                 <div class="product-info">
                     <div class="product-meta"><span>${categoryNames[product.category] || escapeHTML(product.category)}</span><span>★ 4,9</span></div>
@@ -36,7 +36,7 @@ function renderProducts() {
                     </div>
                 </div>
             </article>`).join("")
-        : `<div class="no-results"><span>🍔</span><h2>Nothing on the menu matches.</h2><p>Try another search or pick a different category.</p></div>`;
+        : `<div class="no-results"><span>🍔</span><h2>Nada no cardápio corresponde à busca.</h2><p>Tente outra busca ou escolha uma categoria diferente.</p></div>`;
 }
 
 categoryButtons.forEach(button => {

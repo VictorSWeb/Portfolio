@@ -15,7 +15,7 @@ try {
     }
 } catch (error) {
     if (!(error instanceof SyntaxError)) throw error;
-    console.error("Could not load the saved delivery address.", error);
+    console.error("Não foi possível carregar o endereço de entrega salvo.", error);
     localStorage.removeItem("deliveryInfo");
 }
 

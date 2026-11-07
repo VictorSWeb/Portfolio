@@ -2,48 +2,48 @@ const productId = new URLSearchParams(window.location.search).get("id");
 const product = menuProducts.find(item => item.id === productId);
 const content = document.getElementById("product-content");
 const preview = document.getElementById("product-preview");
-const categoryNames = { burgers: "Burgers", sides: "Sides", drinks: "Drinks", combos: "Combos" };
+const categoryNames = { burgers: "Hambúrgueres", sides: "Acompanhamentos", drinks: "Bebidas", combos: "Combos" };
 
 if (!product) {
     content.innerHTML = `
-        <div class="eyebrow">Oops, this one's gone</div>
-        <h1>We couldn't find that item.</h1>
-        <p>Head back to the menu and pick something delicious.</p>
-        <a href="menu.html" class="btn btn-primary">Back to menu</a>`;
+        <div class="eyebrow">Ops, este item não está disponível</div>
+        <h1>Não encontramos esse item.</h1>
+        <p>Volte ao cardápio e escolha algo delicioso.</p>
+        <a href="menu.html" class="btn btn-primary">Voltar ao cardápio</a>`;
 } else {
     document.title = `${product.name} — Smash & Co.`;
     preview.innerHTML = `<img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.name)}">`;
     const optionsMarkup = product.category === "burgers" ? `
         <div class="option-group">
-            <h3>Choose your sauce</h3>
+            <h3>Escolha o molho</h3>
             <div class="option-list">
-                <label class="option"><span><input type="radio" name="sauce" value="house sauce" data-price="0" checked> House sauce</span><small>Included</small></label>
-                <label class="option"><span><input type="radio" name="sauce" value="spicy sauce" data-price="0.75"> Spicy sauce</span><small>+ $0.75</small></label>
+                <label class="option"><span><input type="radio" name="sauce" value="molho da casa" data-price="0" checked> Molho da casa</span><small>Incluso</small></label>
+                <label class="option"><span><input type="radio" name="sauce" value="molho picante" data-price="0.75"> Molho picante</span><small>+ US$ 0,75</small></label>
             </div>
         </div>
         <div class="option-group">
-            <h3>Make it yours <small>optional</small></h3>
+            <h3>Do seu jeito <small>opcional</small></h3>
             <div class="option-list">
-                <label class="option"><span><input type="checkbox" class="extra" value="extra cheese" data-price="1.25"> Extra cheese</span><small>+ $1.25</small></label>
-                <label class="option"><span><input type="checkbox" class="extra" value="crispy bacon" data-price="1.75"> Crispy bacon</span><small>+ $1.75</small></label>
-                <label class="option"><span><input type="checkbox" class="extra" value="jalapeños" data-price="0.99"> Jalapeños</span><small>+ $0.99</small></label>
+                <label class="option"><span><input type="checkbox" class="extra" value="queijo extra" data-price="1.25"> Queijo extra</span><small>+ US$ 1,25</small></label>
+                <label class="option"><span><input type="checkbox" class="extra" value="bacon crocante" data-price="1.75"> Bacon crocante</span><small>+ US$ 1,75</small></label>
+                <label class="option"><span><input type="checkbox" class="extra" value="jalapeños" data-price="0.99"> Jalapeños</span><small>+ US$ 0,99</small></label>
             </div>
         </div>` : "";
     content.innerHTML = `
-        <div class="product-meta"><span>${categoryNames[product.category] || escapeHTML(product.category)}</span><span>★ 4.9 · 300+ reviews</span></div>
+        <div class="product-meta"><span>${categoryNames[product.category] || escapeHTML(product.category)}</span><span>★ 4,9 · mais de 300 avaliações</span></div>
         <h1>${escapeHTML(product.name)}</h1>
         <p class="product-description">${escapeHTML(product.description)}</p>
         <div class="price-large" id="total-price">${formatPrice(product.price)}</div>
         ${optionsMarkup}
         <div class="product-purchase">
             <div class="quantity" aria-label="Quantidade">
-                <button type="button" id="minus" aria-label="Decrease quantity">−</button>
+                <button type="button" id="minus" aria-label="Diminuir quantidade">−</button>
                 <strong id="quantity" aria-live="polite">1</strong>
-                <button type="button" id="plus" aria-label="Increase quantity">+</button>
+                <button type="button" id="plus" aria-label="Aumentar quantidade">+</button>
             </div>
-            <button class="add-cart-large" id="add-cart" type="button">Add to cart · <span id="button-price">${formatPrice(product.price)}</span></button>
+            <button class="add-cart-large" id="add-cart" type="button">Adicionar à sacola · <span id="button-price">${formatPrice(product.price)}</span></button>
         </div>
-        <p class="product-note">♨️ Made fresh to order · 🛵 Estimated delivery: 30–45 min</p>`;
+        <p class="product-note">♨️ Preparado na hora · 🛵 Prazo estimado de entrega: 30–45 min</p>`;
 
     let quantity = 1;
     const quantityLabel = document.getElementById("quantity");
