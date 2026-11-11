@@ -546,6 +546,12 @@ nav a:hover,
     font-weight: 700;
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+}
+
 .project-link span {
     color: #607744;
     font-size: 14px;
