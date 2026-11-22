@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AgendaFlow é uma demonstração frontend de agendamento e administração para uma barbearia fictícia, sem backend ou autenticação.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AgendaFlow | Projetos de Victor Saraiva">
+    <meta property="og:description" content="Demonstração de agendamento, serviços, profissionais e painel administrativo.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/projects/agendaflow.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/projects/agendaflow.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    <title>AgendaFlow | Projetos de Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="../">Início</a><a href="../projects.html" aria-current="page">Projetos</a><a href="../about.html">Sobre</a><a href="../contact.html">Contato</a>
+            </nav>
+            <a class="header-contact" href="../contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container detail-hero-layout">
+                <div>
+                    <p class="eyebrow">Projeto 05 / Demonstração frontend</p>
+                    <h1>Agenda<em>Flow</em></h1>
+                    <p class="detail-hero-copy">Uma demonstração de agendamento para a NorthSide Barber Co., marca fictícia. O projeto reúne um fluxo público de reserva de exemplo e ferramentas administrativas para explorar serviços, profissionais e horários.</p>
+                </div>
+                <dl class="detail-facts">
+                    <div><dt>Interface</dt><dd>Next.js · React · TypeScript</dd></div>
+                    <div><dt>Estilos</dt><dd>Tailwind CSS</dd></div>
+                    <div><dt>Dados</dt><dd>Exemplos estáticos e LocalStorage</dd></div>
+                    <div><dt>Backend</dt><dd>Não implementado</dd></div>
+                </dl>
+            </div>
+        </section>
+        <section class="detail-content">
+            <div class="container">
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>O que dá para explorar</h2>
+                        <div class="detail-section-copy">
+                            <ul>
+                                <li>Fluxo público de seis etapas para escolher serviço, profissional, data, horário e informar dados de demonstração.</li>
+                                <li>Painel administrativo com visão geral de exemplo e gerenciamento local de agendamentos, profissionais e serviços.</li>
+                                <li>Busca e filtros de agendamentos, além de ações para confirmar ou cancelar registros de exemplo.</li>
+                                <li>Formulários para criar, editar, ativar e remover profissionais e serviços no navegador atual.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Limites da demonstração</h2>
+                        <div class="detail-section-copy">
+                            <p>O fluxo público usa datas, horários, serviços e profissionais estáticos. Concluir o fluxo não cria nem salva um agendamento real. Os indicadores do painel também são exemplos estáticos.</p>
+                            <p>Alterações administrativas ficam no LocalStorage do navegador atual e não são sincronizadas com o fluxo público ou com outros dispositivos. O painel não possui backend, banco de dados ou autenticação e pode ser acessado publicamente.</p>
+                            <p class="notice">A barbearia e seus dados são fictícios. Este projeto não aceita reservas reais.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Código e demonstração</h2>
+                        <div class="detail-section-copy">
+                            <div class="project-actions">
+                                <a class="button button-primary" href="https://portfolio-wpbb.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir demonstração <span aria-hidden="true">↗</span></a>
+                                <a class="button button-secondary" href="https://github.com/VictorSWeb/Portfolio/tree/main/projects/agendaflow" target="_blank" rel="noopener noreferrer">Ver código-fonte <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a class="text-link" href="../projects.html">Voltar ao catálogo <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="../privacy.html">Privacidade</a><a href="../terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="../script.js" defer></script>
+</body>
+</html>

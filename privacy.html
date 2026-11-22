@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Política de Privacidade do portfólio de Victor Saraiva e informações sobre o formulário de contato planejado.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Política de Privacidade | Victor Saraiva">
+    <meta property="og:description" content="Saiba quais dados o site pode tratar e como o formulário de contato foi projetado.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/privacy.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/privacy.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Política de Privacidade | Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="./" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="./">Início</a><a href="projects.html">Projetos</a><a href="about.html">Sobre</a><a href="contact.html">Contato</a>
+            </nav>
+            <a class="header-contact" href="contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main class="page-main" id="main">
+        <div class="container">
+            <header class="page-heading">
+                <p class="eyebrow">Informações legais</p>
+                <h1>Política de <em>Privacidade.</em></h1>
+                <p>Esta página descreve o tratamento de dados associado ao portfólio e ao formulário de contato, caso ele venha a ser configurado.</p>
+            </header>
+            <div class="legal-copy">
+                <section>
+                    <h2>Responsável e estado atual</h2>
+                    <p>O responsável por este portfólio é Victor Saraiva. Para dúvidas ou solicitações sobre privacidade, entre em contato por <a href="mailto:victorsaraiva.web@outlook.com">victorsaraiva.web@outlook.com</a>.</p>
+                    <p>No código atual, o envio do formulário está desativado até que o endpoint do Supabase seja configurado. Enquanto permanecer assim, o formulário não transmite nem armazena as informações digitadas. O contato direto por e-mail ou WhatsApp é iniciado pelo visitante e passa também pelos respectivos provedores.</p>
+                </section>
+                <section>
+                    <h2>Dados tratados pelo formulário</h2>
+                    <p>Quando o formulário for habilitado, serão solicitados somente nome, e-mail, assunto, mensagem e consentimento para usar esses dados para responder. O sistema também cria um identificador técnico da solicitação e registra o horário de envio e o estado da notificação por e-mail.</p>
+                    <p>A aplicação não grava o endereço IP do visitante na tabela de solicitações. A hospedagem e os provedores de infraestrutura podem processar metadados técnicos de conexão, como parte da operação e segurança dos serviços, segundo suas próprias políticas.</p>
+                </section>
+                <section>
+                    <h2>Finalidade, base e compartilhamento</h2>
+                    <p>Os dados do formulário são destinados a receber, responder e administrar a mensagem enviada, com base no consentimento explícito fornecido no próprio formulário. Não há finalidade de marketing ou envio de newsletters neste projeto.</p>
+                    <p>Após configuração, o Supabase será usado para receber a solicitação por uma função de servidor e armazená-la em PostgreSQL. O Resend será usado para encaminhar uma notificação ao endereço de contato configurado. Esses provedores processam dados conforme seus próprios termos e políticas. A região de processamento dependerá da configuração do projeto Supabase, ainda não provisionado neste repositório.</p>
+                    <p>As credenciais administrativas do Supabase e a chave do Resend devem permanecer como segredos de servidor. O navegador recebe apenas a URL pública da função, nunca essas chaves.</p>
+                </section>
+                <section>
+                    <h2>Retenção e segurança</h2>
+                    <p>A migração fornecida define a remoção das solicitações após 12 meses e inclui uma função para esse descarte. A exclusão automática só ocorrerá se o operador habilitar a extensão pg_cron e configurar a tarefa descrita no guia Supabase. Se essa tarefa não estiver ativa, o banco manterá os registros até que sejam removidos manualmente. A integração ainda não está configurada por este repositório.</p>
+                    <p>A tabela foi projetada com Row Level Security e sem políticas de leitura ou escrita para visitantes; o acesso administrativo é feito pela função de servidor. A proteção efetiva depende de aplicar a migração e manter as chaves fora do cliente.</p>
+                </section>
+                <section>
+                    <h2>Cookies, conteúdo externo e direitos</h2>
+                    <p>As páginas principais deste portfólio não carregam fontes remotas, ferramentas de análise ou cookies de publicidade. Os sites conceituais são projetos separados e podem carregar recursos externos próprios quando visitados.</p>
+                    <p>É possível solicitar acesso, correção ou exclusão de uma mensagem enviada, ou retirar o consentimento quando aplicável, pelo e-mail de contato. A solicitação poderá exigir confirmação suficiente para localizar o registro.</p>
+                </section>
+                <section>
+                    <h2>Alterações</h2>
+                    <p>Esta política poderá ser atualizada se o formulário, seus provedores ou os dados tratados mudarem. A versão publicada nesta página descreve a configuração e as limitações conhecidas do projeto.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="./">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="privacy.html" aria-current="page">Privacidade</a><a href="terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

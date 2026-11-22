@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Entre em contato com Victor Saraiva sobre oportunidades profissionais, projetos ou colaboração em desenvolvimento de software.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contato | Victor Saraiva">
+    <meta property="og:description" content="Fale sobre uma oportunidade, projeto ou colaboração em desenvolvimento de software.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/contact.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/contact.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Contato | Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="./" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="./">Início</a><a href="projects.html">Projetos</a><a href="about.html">Sobre</a><a href="contact.html" aria-current="page">Contato</a>
+            </nav>
+            <a class="header-contact" href="contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main class="page-main" id="main">
+        <div class="container contact-layout">
+            <section class="contact-details" aria-labelledby="contact-title">
+                <p class="eyebrow">Contato / Victor Saraiva</p>
+                <h1 class="contact-details-title" id="contact-title">Vamos falar sobre o que você precisa.</h1>
+                <p>Estou aberto a conversar sobre oportunidades profissionais, projetos freelance e colaboração na área de desenvolvimento de software.</p>
+                <div class="contact-options">
+                    <a href="mailto:victorsaraiva.web@outlook.com"><span>E-mail</span><span>victorsaraiva.web@outlook.com ↗</span></a>
+                    <a href="https://wa.me/558598463934" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><span>Enviar mensagem ↗</span></a>
+                </div>
+            </section>
+            <section aria-label="Formulário de contato">
+                <form class="contact-form" id="contact-form">
+                    <fieldset id="contact-fields" disabled>
+                        <legend>Envie uma mensagem</legend>
+                        <div class="form-field">
+                            <label for="contact-name">Nome</label>
+                            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-email">E-mail</label>
+                            <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-subject">Assunto</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="Oportunidade profissional">Oportunidade profissional</option>
+                                <option value="Projeto">Projeto</option>
+                                <option value="Colaboração">Colaboração</option>
+                                <option value="Outro assunto">Outro assunto</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" name="message" minlength="20" maxlength="5000" required></textarea>
+                        </div>
+                        <label class="consent-field">
+                            <input name="consent" type="checkbox" required>
+                            <span>Concordo que os dados informados sejam usados para responder a esta mensagem, conforme a <a href="privacy.html">Política de Privacidade</a>.</span>
+                        </label>
+                        <label class="form-trap" aria-hidden="true">Deixe este campo vazio<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+                        <button class="button button-primary" id="contact-submit" type="submit">Enviar mensagem <span aria-hidden="true">↗</span></button>
+                    </fieldset>
+                    <p class="contact-status" id="contact-status" role="status" aria-live="polite">O formulário online ainda não está configurado. Você pode me escrever diretamente pelo e-mail ou WhatsApp.</p>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="./">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="privacy.html">Privacidade</a><a href="terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="contact-config.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
+</body>
+</html>

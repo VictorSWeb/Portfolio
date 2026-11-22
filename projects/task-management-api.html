@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Task Management API: API REST em Node.js, TypeScript e Express, com validação Zod, paginação, documentação Swagger e dados em memória.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Task Management API | Projetos de Victor Saraiva">
+    <meta property="og:description" content="API REST para operações e consultas de tarefas, documentada com Swagger e OpenAPI.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/projects/task-management-api.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/projects/task-management-api.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    <title>Task Management API | Projetos de Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="../">Início</a><a href="../projects.html" aria-current="page">Projetos</a><a href="../about.html">Sobre</a><a href="../contact.html">Contato</a>
+            </nav>
+            <a class="header-contact" href="../contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container detail-hero-layout">
+                <div>
+                    <p class="eyebrow">Projeto 06 / API REST</p>
+                    <h1>Task Management <em>API</em></h1>
+                    <p class="detail-hero-copy">API REST para criar, consultar, atualizar e excluir tarefas. A implementação separa rotas, controladores, serviços e repositório, valida entradas e expõe documentação interativa.</p>
+                </div>
+                <dl class="detail-facts">
+                    <div><dt>Runtime</dt><dd>Node.js · Express</dd></div>
+                    <div><dt>Linguagem</dt><dd>TypeScript</dd></div>
+                    <div><dt>Validação</dt><dd>Zod</dd></div>
+                    <div><dt>Testes</dt><dd>Vitest</dd></div>
+                </dl>
+            </div>
+        </section>
+        <section class="detail-content">
+            <div class="container">
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Rotas principais</h2>
+                        <div class="detail-section-copy">
+                            <ul class="endpoint-list">
+                                <li><code>GET</code><span>/api/health</span></li>
+                                <li><code>GET</code><span>/api/tasks</span></li>
+                                <li><code>GET</code><span>/api/tasks/:id</span></li>
+                                <li><code>POST</code><span>/api/tasks</span></li>
+                                <li><code>PUT</code><span>/api/tasks/:id</span></li>
+                                <li><code>DELETE</code><span>/api/tasks/:id</span></li>
+                            </ul>
+                            <p class="notice">Os registros ficam somente em memória no processo da API. Eles são perdidos quando o servidor reinicia e não são compartilhados entre instâncias.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Consultas e validação</h2>
+                        <div class="detail-section-copy">
+                            <p>A listagem aceita filtros por status e prioridade, busca sem distinção entre maiúsculas e minúsculas no título, ordenação e paginação. Os parâmetros e corpos das requisições são validados com Zod.</p>
+                            <p>Os endpoints e esquemas estão documentados por Swagger UI e OpenAPI. O projeto não implementa autenticação, autorização ou persistência durável.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Hospedagem e código</h2>
+                        <div class="detail-section-copy">
+                            <p class="notice">A instância hospedada respondeu com HTTP 503 durante esta revisão. Os links abaixo apontam para os endereços configurados, mas a disponibilidade do serviço não está confirmada.</p>
+                            <div class="project-actions">
+                                <a class="button button-primary" href="https://task-management-api-ldis.onrender.com/api/docs" target="_blank" rel="noopener noreferrer">Tentar abrir Swagger UI <span aria-hidden="true">↗</span></a>
+                                <a class="button button-secondary" href="https://task-management-api-ldis.onrender.com/api/health" target="_blank" rel="noopener noreferrer">Verificar health check <span aria-hidden="true">↗</span></a>
+                                <a class="button button-secondary" href="https://github.com/VictorSWeb/Portfolio/tree/main/projects/task-management-api" target="_blank" rel="noopener noreferrer">Ver código-fonte <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a class="text-link" href="../projects.html">Voltar ao catálogo <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="../privacy.html">Privacidade</a><a href="../terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="../script.js" defer></script>
+</body>
+</html>

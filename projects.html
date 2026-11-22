@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Catálogo de sites conceituais, aplicações frontend e APIs REST de Victor Saraiva, com tecnologias e limites documentados.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projetos | Victor Saraiva">
+    <meta property="og:description" content="Explore sites conceituais, aplicações frontend e APIs REST com escopo documentado.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/projects.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/projects.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Projetos | Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="./" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="./">Início</a>
+                <a href="projects.html" aria-current="page">Projetos</a>
+                <a href="about.html">Sobre</a>
+                <a href="contact.html">Contato</a>
+            </nav>
+            <a class="header-contact" href="contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main class="page-main" id="main">
+        <div class="container">
+            <header class="page-heading">
+                <p class="eyebrow">Catálogo / 07 projetos</p>
+                <h1>Projetos de web e <em>software.</em></h1>
+                <p>Encontre sites conceituais para negócios fictícios, aplicações frontend e APIs. As descrições distinguem demonstrações de funcionalidades que dependem de serviços externos.</p>
+            </header>
+
+            <section aria-label="Buscar e filtrar projetos">
+                <div class="project-controls">
+                    <div class="search-field">
+                        <label for="project-search">Buscar por nome, escopo ou tecnologia</label>
+                        <input id="project-search" type="search" placeholder="Ex.: React, agendamento, API" autocomplete="off">
+                    </div>
+                    <div class="filter-controls" role="group" aria-label="Filtrar por tipo de projeto">
+                        <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+                        <button type="button" data-filter="sites" aria-pressed="false">Sites conceituais</button>
+                        <button type="button" data-filter="apps" aria-pressed="false">Aplicações</button>
+                        <button type="button" data-filter="apis" aria-pressed="false">APIs</button>
+                    </div>
+                </div>
+                <p class="result-count" id="project-count" aria-live="polite">7 projetos encontrados</p>
+                <div class="project-directory">
+                    <article class="project-entry" data-project data-category="sites">
+                        <span class="row-index">01</span>
+                        <div>
+                            <p class="project-category">Site conceitual</p>
+                            <h2><a href="northside-barber/index.html">Northside Barber Co.</a></h2>
+                        </div>
+                        <p>Site de uma barbearia fictícia com serviços, horários, informações de visita e navegação responsiva.</p>
+                        <p class="project-tech">HTML · CSS · JavaScript</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="sites">
+                        <span class="row-index">02</span>
+                        <div>
+                            <p class="project-category">Site conceitual</p>
+                            <h2><a href="voltline-electrical/index.html">Voltline Electrical</a></h2>
+                        </div>
+                        <p>Apresentação fictícia de serviços elétricos, com um guia interativo de orientação geral e FAQ.</p>
+                        <p class="project-tech">HTML · CSS · JavaScript</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="sites">
+                        <span class="row-index">03</span>
+                        <div>
+                            <p class="project-category">Loja demonstrativa</p>
+                            <h2><a href="smash-co-burguer/index.html">Smash &amp; Co.</a></h2>
+                        </div>
+                        <p>Cardápio e fluxo de pedido demonstrativo, com personalização, carrinho e acompanhamento local de pedidos.</p>
+                        <p class="project-tech">HTML · CSS · JavaScript · LocalStorage</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="apps">
+                        <span class="row-index">04</span>
+                        <div>
+                            <p class="project-category">Aplicação frontend</p>
+                            <h2><a href="projects/taskflow.html">TaskFlow</a></h2>
+                        </div>
+                        <p>Gerenciamento de tarefas com status, prioridades, datas opcionais, busca, filtros, ordenação e painel de resumo.</p>
+                        <p class="project-tech">React · TypeScript · Vite · LocalStorage</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="apps">
+                        <span class="row-index">05</span>
+                        <div>
+                            <p class="project-category">Demonstração frontend</p>
+                            <h2><a href="projects/agendaflow.html">AgendaFlow</a></h2>
+                        </div>
+                        <p>Fluxo de agendamento de exemplo e painel para explorar gestão de horários, profissionais e serviços.</p>
+                        <p class="project-tech">Next.js · React · TypeScript · Tailwind CSS</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="apis">
+                        <span class="row-index">06</span>
+                        <div>
+                            <p class="project-category">API REST</p>
+                            <h2><a href="projects/task-management-api.html">Task Management API</a></h2>
+                        </div>
+                        <p>API de tarefas com operações CRUD, validação, pesquisa, filtros, ordenação, paginação e Swagger.</p>
+                        <p class="project-tech">Node.js · TypeScript · Express · Zod · Vitest</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="project-entry" data-project data-category="apis">
+                        <span class="row-index">07</span>
+                        <div>
+                            <p class="project-category">API REST</p>
+                            <h2><a href="projects/github-analytics-api.html">GitHub Analytics API</a></h2>
+                        </div>
+                        <p>Consulta perfis e repositórios públicos do GitHub e calcula estatísticas com controle de completude.</p>
+                        <p class="project-tech">Python · FastAPI · Pydantic · HTTPX · Pytest</p>
+                        <span class="row-arrow" aria-hidden="true">↗</span>
+                    </article>
+                </div>
+                <p class="empty-results" id="empty-results" hidden>Nenhum projeto corresponde a essa busca e categoria.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="./">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="privacy.html">Privacidade</a><a href="terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

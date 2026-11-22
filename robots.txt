@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /Portfolio/
+
+Sitemap: https://victorsweb.github.io/Portfolio/sitemap.xml

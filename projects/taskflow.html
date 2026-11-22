@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TaskFlow é uma aplicação frontend de gerenciamento de tarefas com filtros, prioridades, ordenação e persistência local no navegador.">
+    <meta name="theme-color" content="#111310">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TaskFlow | Projetos de Victor Saraiva">
+    <meta property="og:description" content="Aplicação de tarefas em React e TypeScript, com dados persistidos no LocalStorage.">
+    <meta property="og:url" content="https://victorsweb.github.io/Portfolio/projects/taskflow.html">
+    <link rel="canonical" href="https://victorsweb.github.io/Portfolio/projects/taskflow.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    <title>TaskFlow | Projetos de Victor Saraiva</title>
+</head>
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../" aria-label="Victor Saraiva, página inicial">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir navegação"><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+                <a href="../">Início</a><a href="../projects.html" aria-current="page">Projetos</a><a href="../about.html">Sobre</a><a href="../contact.html">Contato</a>
+            </nav>
+            <a class="header-contact" href="../contact.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container detail-hero-layout">
+                <div>
+                    <p class="eyebrow">Projeto 04 / Aplicação frontend</p>
+                    <h1>Task<em>Flow</em></h1>
+                    <p class="detail-hero-copy">Aplicação de gerenciamento pessoal de tarefas. Permite organizar itens por status e prioridade, acompanhar um resumo e manter os dados no navegador utilizado.</p>
+                </div>
+                <dl class="detail-facts">
+                    <div><dt>Interface</dt><dd>React · TypeScript</dd></div>
+                    <div><dt>Ferramentas</dt><dd>Vite · CSS</dd></div>
+                    <div><dt>Persistência</dt><dd>LocalStorage</dd></div>
+                    <div><dt>Servidor</dt><dd>Não utilizado</dd></div>
+                </dl>
+            </div>
+        </section>
+        <section class="detail-content">
+            <div class="container">
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Recursos</h2>
+                        <div class="detail-section-copy">
+                            <ul>
+                                <li>Criar, editar, excluir e alterar o status de tarefas.</li>
+                                <li>Definir prioridade e data opcional de vencimento.</li>
+                                <li>Pesquisar por título e descrição, filtrar por status e prioridade, e ordenar por criação, vencimento ou prioridade.</li>
+                                <li>Consultar totais e contagens de tarefas por status.</li>
+                                <li>Exibir um aviso quando o navegador não consegue ler ou gravar os dados locais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Armazenamento e limites</h2>
+                        <div class="detail-section-copy">
+                            <p>As tarefas são guardadas no LocalStorage sob a chave <code>taskflow.tasks.v1</code>. Permanecem no mesmo navegador e na mesma origem entre recarregamentos.</p>
+                            <p>Os dados não são enviados a um servidor e não são sincronizados entre navegadores ou dispositivos. A aplicação não tem backend, banco de dados, autenticação ou colaboração entre usuários.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-section">
+                    <div class="detail-section-layout">
+                        <h2>Código-fonte</h2>
+                        <div class="detail-section-copy">
+                            <p>O repositório inclui instruções para instalar dependências, iniciar o ambiente local, executar o build e rodar o ESLint.</p>
+                            <div class="project-actions">
+                                <a class="button button-primary" href="https://github.com/VictorSWeb/Portfolio/tree/main/projects/taskflow" target="_blank" rel="noopener noreferrer">Ver código-fonte <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a class="text-link" href="../projects.html">Voltar ao catálogo <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../">Victor<span>S</span>Web<span class="brand-period">.</span></a>
+            <p>Portfólio de Victor Saraiva</p>
+            <nav aria-label="Links legais"><a href="../privacy.html">Privacidade</a><a href="../terms.html">Termos</a></nav>
+            <span>© <span data-current-year>2026</span> Victor Saraiva</span>
+        </div>
+    </footer>
+    <script src="../script.js" defer></script>
+</body>
+</html>
